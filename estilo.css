@@ -1,0 +1,1956 @@
+/*=====================================
+        MANDATARIA AUTOMOTOR
+          MIRIAM PEREYRA
+======================================*/
+
+/*----------------------------
+        IMPORTAR FUENTES
+-----------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+/*----------------------------
+        GENERAL
+-----------------------------*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#F9EFF1;
+
+    color:#6D4C41;
+
+    overflow-x:hidden;
+
+}
+
+/*----------------------------
+        HEADER
+-----------------------------*/
+
+header{
+
+    width:100%;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    z-index:1000;
+
+    background:rgba(255,255,255,.90);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:all .3s ease;
+
+    padding:20px 0;
+
+}
+
+.contenedor-menu{
+
+    width:92%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 0;
+
+}
+
+/*----------------------------
+        LOGO
+-----------------------------*/
+
+.logo img{
+
+    width:135px;
+
+    transition:.4s;
+
+}
+
+.logo img:hover{
+
+    transform:scale(1.08);
+
+}
+
+/*----------------------------
+        MENÚ
+-----------------------------*/
+
+.nav ul{
+
+    list-style:none;
+
+    display:flex;
+
+    align-items: center;
+
+    gap:45px;
+
+}
+
+.nav ul li a{
+
+    text-decoration:none;
+
+    color:#6d4c41;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    font-size:16px;
+
+    position:relative;
+
+}
+
+.nav ul li a:hover{
+
+    color:#D8A2B8;
+
+} 
+
+.nav ul li a::after{
+
+    content:"";
+
+    position: absolute;
+
+    width: 0;
+
+    height: 2px;
+
+    background:#C58DA4;
+
+    left:0;
+
+    bottom:-8px;
+
+    transition:.35s;
+
+}
+
+.nav ul li a:hover::after{
+
+    width:100%;
+
+}
+
+
+
+/*----------------------------
+        HERO
+-----------------------------*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:60px;
+
+    padding:140px 8% 80px;
+
+    background:linear-gradient(135deg,#FFF8FA,#F9EFF1);
+
+    :relative;
+
+    overflow:hidden;
+}
+
+/*----------------------------
+        TEXTO HERO
+-----------------------------*/
+
+.hero-contenido{
+
+    width:55%;
+
+    text-align: center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.logo-principal{
+
+    width:580px;
+
+    max-width:100%;
+
+    display:block;
+
+    margin:0 auto 35px;
+
+    animation:flotar 4s ease-in-out infinite;
+
+}
+
+.hero h2{
+
+    font-size:28px;
+
+    font-weight:500;
+
+    color:#9E7D75;
+
+    margin-bottom:10px;
+
+}
+
+.hero h1{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:68px;
+
+    color:#5B4038;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    font-size:20px;
+
+    line-height:34px;
+
+    max-width:650px;
+
+    margin-bottom:40px;
+
+}
+
+/*=====================================
+        BOTONES
+======================================*/
+
+.botones{
+
+    display:flex;
+
+    justify-content: center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn-principal{
+
+    display:inline-block;
+
+    padding:18px 42px;
+
+    background:linear-gradient(135deg,#D6A3B7,#C58DA4);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    transition:.35s;
+
+    box-shadow:0 15px 30px rgba(197,141,164,.30);
+
+}
+
+.btn-principal:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 40px rgba(197,141,164,.45);
+
+}
+
+.btn-secundario{
+
+    display:inline-block;
+
+    padding:16px 38px;
+
+    border:2px solid #C58DA4;
+
+    color:#8B5E6B;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.btn-secundario:hover{
+
+    background:#C58DA4;
+
+    color:white;
+
+}
+
+/*=====================================
+        AUTO PRINCIPAL
+======================================*/
+
+.hero-imagen{
+
+    width:45%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.55);
+
+    border-radius:35px;
+
+    padding:30px;
+
+    position:relative;
+
+    z-index:2;
+
+
+
+}
+
+.hero-imagen img{
+
+    width:100%;
+
+    max-width:760px;
+
+    animation:flotar 5s ease-in-out infinite;
+
+    filter:drop-shadow(0 35px 40px rgba(0,0,0,.20));
+
+}
+
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:350px;
+
+    height:350px;
+
+    border-radius:50%;
+
+    background:rgba(197,141,164,.08);
+
+    top:120px;
+
+    right:120px;
+
+    z-index:0;
+
+}
+
+/*=====================================
+        PRESENTACIÓN
+======================================*/
+
+.presentacion{
+
+    padding:110px 10%;
+
+    margin-top:40px;
+
+    text-align:center;
+
+    background:white;
+
+}
+
+.presentacion h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:45px;
+
+    color:#6D4C41;
+
+    margin-bottom:25px;
+
+}
+
+.presentacion p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+    font-size:18px;
+
+    line-height:34px;
+
+    color:#666;
+
+}
+
+/*=====================================
+        TITULOS
+======================================*/
+
+.titulo-seccion{
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+}
+
+.titulo-seccion h5{
+
+    color:#C58DA4;
+
+    letter-spacing:5px;
+
+    font-size:15px;
+
+    margin-bottom:12px;
+
+    font-weight:700;
+
+}
+
+.titulo-seccion h2{
+
+    font-family:'Playfair Display',serif;
+
+    font-size:48px;
+
+    color:#6D4C41;
+
+}
+
+.titulo-seccion p{
+
+    margin-top:15px;
+
+    color:#777;
+
+    font-size:18px;
+
+}
+
+.titulo-seccion h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:80px;
+
+    height:4px;
+
+    background:#C58DA4;
+
+    margin:18px auto 0;
+
+    border-radius:10px;
+
+}
+
+/*=====================================
+        ANIMACIÓN
+======================================*/
+
+@keyframes flotar{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+ }
+
+
+
+ .imagen-tramites img{
+
+    width:100%;
+
+    max-width:420px;
+
+    height:auto;
+
+    border-radius:25px;
+
+    box-shadow:0 25px 40px rgba(0,0,0,.15);
+
+}
+
+/*=====================================
+        SERVICIOS
+======================================*/
+
+.servicios{
+
+    padding:100px 8%;
+
+    margin-top:60px;
+
+    background:#ffffff;
+
+}
+
+.contenedor-servicios{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:40px;
+
+    margin-top:80px;
+
+}
+
+.card{
+
+    background:linear-gradient(180deg,#FFFFFF,#FFF8FA);
+
+    border-radius:25px;
+
+    padding:40px 30px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:all .4s ease;
+
+    border:1px solid rgba(197,141,164,.15);
+
+}
+
+
+/*=====================================
+        TRÁMITES
+======================================*/
+
+
+.texto-tramites{
+
+    width:50%;
+
+}
+
+.texto-tramites h2{
+
+    font-family:'Playfair Display', serif;
+
+    font-size:46px;
+
+    color:#5B4038;
+
+    margin-bottom:25px;
+
+}
+
+.texto-tramites p{
+
+    font-size:18px;
+
+    line-height:30px;
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+
+.texto-tramites ul{
+
+    list-style:none;
+
+    margin-bottom:35px;
+
+}
+
+.texto-tramites ul li{
+
+    margin-bottom:12px;
+
+    font-size:18px;
+
+    color:#555;
+
+}
+
+.imagen-tramites{
+
+    width:40%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.imagen-tramites img{
+
+    width:100%;
+
+    max-width:420;
+
+    border-radius:25px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 25px 45px rgba(197,141,164,.25);
+
+    border-color:#c58da4;
+
+}
+
+.card i{
+
+    width:80px;
+
+    height:80px;
+
+    line-height:80px;
+
+    font-size:34px;
+
+    background:#fdf2f5;
+
+    color:#C58DA4;
+
+    border-radius:50%;
+
+    margin-bottom:25px;
+
+    transition:.4s;
+}
+
+
+.card:hover i{
+
+    background:#C58DA4;
+
+    color:white;
+
+}
+.card h3{
+
+    margin-bottom:18px;
+
+    font-size:24px;
+
+    color:#5B4038 ;
+
+}
+
+.card p{
+
+    line-height:30px;
+
+    color:#777;
+
+    font-size:16px;
+
+}
+
+.tramites-home{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:70px;
+
+    padding:120px 8%;
+
+    margin-top:60px;
+
+    background:#FFF7FA;
+
+    border-radius:50px 50px 0 0;
+
+}
+
+/*=====================================
+        FOOTER
+======================================*/
+
+footer{
+
+    background:#5B4038;
+
+    color:white;
+
+    padding:60px 8% 20px;
+
+    margin-top:0;
+
+}
+
+.footer-contenedor{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:40px;
+
+}
+
+.footer-logo img{
+
+    width:120px;
+
+    margin-bottom:15px;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.footer-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-bottom:12px;
+
+    transition:.3s;
+
+}
+
+.footer-links a:hover{
+
+    color:#D8A2B8;
+
+}
+
+.footer-contacto p{
+
+    margin-bottom:12px;
+
+    line-height:28px;
+
+}
+
+.copyright{
+
+    text-align:center;
+
+    margin-top:40px;
+
+    border-top:1px solid rgba(255,255,255,.2);
+
+    padding-top:20px;
+
+    font-size:15px;
+
+}
+
+/*=====================================
+        SEPARACIÓN ENTRE SECCIONES
+======================================*/
+
+section{
+
+    padding-top:100px;
+
+    padding-bottom:100px;
+
+}
+
+
+
+.cta{
+
+    margin-top:60px;
+
+}
+
+footer{
+
+    margin-top:0;
+
+}
+
+/*=====================================
+        IMÁGENES
+======================================*/
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+    display:block;
+
+}
+
+
+
+
+
+
+
+
+
+/*=====================================
+        QUIÉN SOY
+======================================*/
+
+.quien-soy{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:70px;
+
+    padding:180px 8% 100px;
+
+    background:#Fdf7f5;
+
+}
+
+.quien-imagen{
+
+    width:40%;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.quien-imagen img{
+
+    width:100%;
+
+    max-width:350px;
+
+    border-radius:30px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+    
+    transition:.4s ease;
+
+}
+
+.quien-texto{
+
+    width:60%;
+
+}
+
+.quien-texto h5{
+
+    color:#C58DA4;
+
+    letter-spacing:4px;
+
+    margin-bottom:10px;
+
+}
+
+.quien-texto h2{
+
+    font-family:'Playfair Display', serif;
+
+    font-size:46px;
+
+    color:#5B4038;
+
+    margin-bottom:25px;
+
+}
+
+.quien-texto p{
+
+    font-size:18px;
+
+    line-height:32px;
+
+    color:#666;
+
+    margin-bottom:20px;
+
+}
+
+.quien-texto ul{
+
+    list-style:none;
+
+    margin:30px 0;
+
+}
+
+.quien-texto ul li{
+
+    margin-bottom:15px;
+
+    font-size:18px;
+
+    color:#555;
+
+}
+
+.quien-imagen img:hover{
+
+    transform:scale(1.05);
+
+}
+
+@media(max-width:768px){
+
+
+.quien-soy{
+
+    flex-direction:column;
+
+    padding:130px 8% 60px;
+
+    text-align:center;
+
+}
+
+
+.quien-imagen,
+.quien-texto{
+
+    width:100%;
+
+}
+
+
+.quien-texto h2{
+
+    font-size:36px;
+
+}
+
+
+.quien-texto p{
+
+    font-size:16px;
+
+    line-height:28px;
+
+}
+
+
+}
+
+
+/*=====================================
+            SERVICIOS
+======================================*/
+
+.servicios{
+
+    padding:180px 8% 100px;
+
+    background:#FDF7F5;
+
+}
+
+.titulo-servicios{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.titulo-servicios h5{
+
+    color:#C58DA4;
+
+    letter-spacing:4px;
+
+    margin-bottom:10px;
+
+}
+
+.titulo-servicios h2{
+
+    font-family:'Playfair Display', serif;
+
+    font-size:46px;
+
+    color:#5B4038;
+
+    margin-bottom:20px;
+
+}
+
+.titulo-servicios p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    color:#666;
+
+    line-height:30px;
+
+}
+
+.contenedor-servicios{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+
+.card-servicio{
+
+    background:#fff;
+
+    padding:40px 30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.card-servicio:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.card-servicio i{
+
+    font-size:48px;
+
+    color:#C9A227;
+
+    margin-bottom:20px;
+
+}
+
+.card-servicio h3{
+
+    color:#5B4038;
+
+    margin-bottom:15px;
+
+    font-size:24px;
+
+}
+
+.card-servicio p{
+
+    color:#666;
+
+    line-height:28px;
+
+    font-size:17px;
+
+}
+
+@media(max-width:768px){
+
+.servicios{
+
+    padding:140px 8% 70px;
+
+}
+
+.titulo-servicios h2{
+
+    font-size:34px;
+
+}
+
+}
+
+
+
+
+
+
+/*=====================================
+            CONTACTO
+======================================*/
+
+.contacto{
+
+    padding:180px 8% 100px;
+
+    background:#FDF7F5;
+
+}
+
+.titulo-contacto{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.titulo-contacto h5{
+
+    color:#C58DA4;
+
+    letter-spacing:4px;
+
+    margin-bottom:10px;
+
+}
+
+.titulo-contacto h2{
+
+    font-family:'Playfair Display', serif;
+
+    font-size:46px;
+
+    color:#5B4038;
+
+    margin-bottom:20px;
+
+}
+
+.titulo-contacto p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#666;
+
+    font-size:18px;
+
+    line-height:30px;
+
+}
+
+.contenedor-contacto{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr;
+
+    gap:40px;
+
+    align-items:start;
+
+}
+
+/*=========================
+        FORMULARIO
+==========================*/
+
+.formulario-contacto{
+
+    background:#FFFFFF;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.fila{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-bottom:20px;
+
+}
+
+.campo{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.campo label{
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+    color:#5B4038;
+
+}
+
+.campo input,
+.campo textarea{
+
+    padding:15px;
+
+    border:1px solid #E5D6D9;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+    font-family:inherit;
+
+}
+
+.campo input:focus,
+.campo textarea:focus{
+
+    border-color:#C58DA4;
+
+    box-shadow:0 0 8px rgba(197,141,164,.30);
+
+}
+
+.campo textarea{
+
+    resize:none;
+
+}
+
+/*=========================
+   INFORMACIÓN CONTACTO
+==========================*/
+
+.info-contacto{
+
+    background:#FFFFFF;
+
+    padding:40px 30px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.info-contacto h3{
+
+    color:#5B4038;
+
+    margin-bottom:25px;
+
+    font-size:28px;
+
+}
+
+.info-contacto p{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    margin-bottom:22px;
+
+    color:#666;
+
+    line-height:28px;
+
+}
+
+.info-contacto i{
+
+    color:#C9A227;
+
+    font-size:22px;
+
+    margin-top:3px;
+
+    width:25px;
+
+}
+
+/*=========================
+      RESPONSIVE
+==========================*/
+
+@media(max-width:900px){
+
+.contenedor-contacto{
+
+    grid-template-columns:1fr;
+
+}
+
+.fila{
+
+    flex-direction:column;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.contacto{
+
+    padding:140px 8% 70px;
+
+}
+
+.titulo-contacto h2{
+
+    font-size:36px;
+
+}
+
+.formulario-contacto,
+.info-contacto{
+
+    padding:30px 20px;
+
+}
+
+}
+
+
+/*=====================================
+        BOTÓN WHATSAPP
+======================================*/
+
+.whatsapp{
+    position:fixed !important;
+
+    right:30px !important;
+    bottom:30px !important;
+
+    width:65px !important;
+    height:65px !important;
+
+    background:#25D366 !important;
+    color:white !important;
+
+    border-radius:50% !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    font-size:34px !important;
+
+    text-decoration:none !important;
+
+    z-index:999999 !important;
+
+    opacity:1 !important;
+    visibility:visible !important;
+}
+
+.whatsapp i{
+    display:block !important;
+    color:white !important;
+    font-size:34px !important;
+}
+
+.whatsapp:hover{
+    transform:scale(1.12);
+}
+
+/*=========================
+      MENSAJE FORMULARIO
+=========================*/
+
+#mensaje-formulario{
+
+    margin-top:20px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    color:#5B4038;
+
+}
+
+
+/*=====================================
+        HEADER MOVIBLE
+======================================*/
+
+header{
+    transition:transform .4s ease;
+}
+
+header.oculto{
+
+    transform:translateY(-100%);
+
+}
+
+/*=====================================*
+        ADAPTACIÓN PARA CELULARES
+*======================================*/
+
+@media (max-width: 768px){
+
+    /*----------------------------*
+            GENERAL
+    *-----------------------------*/
+
+    body{
+        overflow-x:hidden;
+    }
+
+    section{
+        padding-top:80px;
+        padding-bottom:60px;
+    }
+
+
+    /*----------------------------*
+            HEADER
+    *-----------------------------*/
+
+    header{
+        padding:10px 0;
+    }
+
+    .contenedor-menu{
+        width:94%;
+        padding:8px 0;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .logo img{
+        width:100px;
+    }
+
+
+    /*----------------------------*
+            MENÚ
+    *-----------------------------*/
+
+    .nav ul{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .nav ul li a{
+        font-size:13px;
+    }
+
+    .nav ul li a::after{
+        bottom:-4px;
+    }
+
+
+    /*----------------------------*
+            HERO
+    *-----------------------------*/
+
+    .hero{
+        min-height:auto;
+        flex-direction:column;
+        gap:35px;
+        padding:170px 6% 70px;
+        text-align:center;
+    }
+
+    .hero-contenido{
+        width:100%;
+    }
+
+    .logo-principal{
+        width:100%;
+        max-width:360px;
+        margin-bottom:25px;
+    }
+
+    .hero h2{
+        font-size:22px;
+    }
+
+    .hero h1{
+        font-size:42px;
+        line-height:1.15;
+    }
+
+    .hero p{
+        font-size:16px;
+        line-height:27px;
+        margin-bottom:30px;
+    }
+
+
+    /*----------------------------*
+            BOTONES
+    *-----------------------------*/
+
+    .botones{
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+    }
+
+    .btn-principal,
+    .btn-secundario{
+        width:100%;
+        max-width:300px;
+        text-align:center;
+        padding:15px 25px;
+    }
+
+
+    /*----------------------------*
+            AUTO PRINCIPAL
+    *-----------------------------*/
+
+    .hero-imagen{
+        width:100%;
+        padding:15px;
+        border-radius:25px;
+    }
+
+    .hero-imagen img{
+        width:100%;
+    }
+
+
+    /*----------------------------*
+            PRESENTACIÓN
+    *-----------------------------*/
+
+    .presentacion{
+        padding:70px 7%;
+        margin-top:0;
+    }
+
+    .presentacion h2{
+        font-size:34px;
+    }
+
+    .presentacion p{
+        font-size:16px;
+        line-height:28px;
+    }
+
+
+    /*----------------------------*
+            TÍTULOS
+    *-----------------------------*/
+
+    .titulo-seccion{
+        margin-bottom:45px;
+    }
+
+    .titulo-seccion h2{
+        font-size:34px;
+    }
+
+    .titulo-seccion p{
+        font-size:16px;
+        line-height:27px;
+    }
+
+
+    /*----------------------------*
+            TRÁMITES
+    *-----------------------------*/
+
+    .tramites-home{
+        flex-direction:column;
+        gap:40px;
+        padding:80px 7%;
+        margin-top:20px;
+        border-radius:30px 30px 0 0;
+        text-align:center;
+    }
+
+    .texto-tramites{
+        width:100%;
+    }
+
+    .texto-tramites h2{
+        font-size:36px;
+    }
+
+    .texto-tramites p{
+        font-size:16px;
+        line-height:28px;
+    }
+
+    .texto-tramites ul{
+        text-align:left;
+    }
+
+    .texto-tramites ul li{
+        font-size:16px;
+    }
+
+    .imagen-tramites{
+        width:100%;
+    }
+
+    .imagen-tramites img{
+        width:100%;
+        max-width:350px;
+        margin:auto;
+    }
+
+
+    /*----------------------------*
+            SERVICIOS
+    *-----------------------------*/
+
+    .servicios{
+        padding:140px 7% 70px;
+    }
+
+    .contenedor-servicios{
+        grid-template-columns:1fr;
+        gap:25px;
+        margin-top:45px;
+    }
+
+    .card,
+    .card-servicio{
+        padding:30px 22px;
+    }
+
+    .card h3,
+    .card-servicio h3{
+        font-size:22px;
+    }
+
+    .card p,
+    .card-servicio p{
+        font-size:16px;
+        line-height:27px;
+    }
+
+
+    /*----------------------------*
+            QUIÉN SOY
+    *-----------------------------*/
+
+    .quien-soy{
+        flex-direction:column;
+        gap:40px;
+        padding:150px 7% 70px;
+        text-align:center;
+    }
+
+    .quien-imagen,
+    .quien-texto{
+        width:100%;
+    }
+
+    .quien-imagen img{
+        max-width:300px;
+        margin:auto;
+    }
+
+    .quien-texto h2{
+        font-size:36px;
+    }
+
+    .quien-texto p{
+        font-size:16px;
+        line-height:28px;
+    }
+
+    .quien-texto ul{
+        text-align:left;
+        display:inline-block;
+    }
+
+    .quien-texto ul li{
+        font-size:16px;
+    }
+
+
+    /*----------------------------*
+            CONTACTO
+    *-----------------------------*/
+
+    .contacto{
+        padding:150px 7% 70px;
+    }
+
+    .titulo-contacto h2{
+        font-size:34px;
+    }
+
+    .titulo-contacto p{
+        font-size:16px;
+        line-height:27px;
+    }
+
+    .contenedor-contacto{
+        grid-template-columns:1fr;
+        gap:25px;
+    }
+
+    .fila{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .formulario-contacto,
+    .info-contacto{
+        padding:25px 20px;
+    }
+
+    .campo input,
+    .campo textarea{
+        width:100%;
+        font-size:16px;
+    }
+
+
+    /*----------------------------*
+            FOOTER
+    *-----------------------------*/
+
+    footer{
+        padding:50px 7% 20px;
+    }
+
+    .footer-contenedor{
+        grid-template-columns:1fr;
+        gap:35px;
+        text-align:center;
+    }
+
+    .footer-logo img{
+        margin:0 auto 15px;
+    }
+
+    .footer-links{
+        align-items:center;
+    }
+
+    .footer-contacto p{
+        justify-content:center;
+    }
+
+    .copyright{
+        font-size:13px;
+        line-height:22px;
+    }
+
+        
+
+/*=====================================*
+        CELULARES MUY PEQUEÑOS
+*======================================*/
+
+@media (max-width: 480px){
+
+    .contenedor-menu{
+        gap:8px;
+    }
+
+    .logo img{
+        width:90px;
+    }
+
+    .nav ul{
+        gap:8px;
+    }
+
+    .nav ul li a{
+        font-size:12px;
+    }
+
+    .hero{
+        padding-top:160px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+    .hero p{
+        font-size:15px;
+        line-height:25px;
+    }
+
+    .titulo-seccion h2,
+    .titulo-servicios h2,
+    .titulo-contacto h2{
+        font-size:31px;
+    }
+
+    .quien-texto h2,
+    .texto-tramites h2{
+        font-size:32px;
+    }
+
+    .btn-principal,
+    .btn-secundario{
+        max-width:280px;
+    }
+
+}
+
+/*=====================================
+        FORMULARIO RESPONSIVE
+======================================*/
+
+@media (max-width: 600px) {
+
+    #formulario {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+    #formulario .fila {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    #formulario .campo {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #formulario input,
+    #formulario textarea {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    #formulario button {
+        max-width: 100%;
+    }
+
+}
+/*=====================================*
+* AJUSTE RESPONSIVE AL ABRIR F12
+*======================================*/
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    width: 100%;
+    max-width: 100%;
+}
