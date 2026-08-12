@@ -1,4 +1,4 @@
-5/*=====================================
+/*=====================================
         MANDATARIA AUTOMOTOR
           MIRIAM PEREYRA
 ======================================*/
@@ -1961,19 +1961,126 @@ section {
     box-sizing: border-box;
 }
 
+/*=====================================*
+        CONTACTO - AJUSTE CELULAR
+*======================================*/
+
+@media (max-width: 768px) {
+
+    .contacto {
+        width: 100%;
+        padding: 150px 5% 60px;
+        overflow: hidden;
+    }
+
+    .contenedor-contacto {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin: 0;
+    }
+
+    .formulario-contacto,
+    .info-contacto {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .formulario-contacto {
+        padding: 25px 20px;
+    }
+
+    .info-contacto {
+        padding: 25px 20px;
+        overflow: hidden;
+    }
+
+    .info-contacto p {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 20px;
+        line-height: 25px;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .info-contacto i {
+        flex: 0 0 25px;
+        width: 25px;
+        margin-top: 2px;
+    }
+
+    .info-contacto p {
+        font-size: 15px;
+    }
+
+    .campo {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .campo input,
+    .campo textarea {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+}
+
+/*=====================================*
+   CORRECCION CONTACTO CELULAR
+*======================================*/
 
 @media (max-width: 768px) {
 
     .contenedor-contacto {
-        outline: 3px solid red !important;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
     }
 
-    .formulario-contacto {
-        outline: 3px solid blue !important;
+    .formulario-contacto,
+    .info-contacto {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
     }
 
     .info-contacto {
-        outline: 3px solid green !important;
+        padding: 25px 18px;
+        overflow: hidden;
+    }
+
+    .info-contacto p {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        line-height: 24px;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .info-contacto i {
+        flex-shrink: 0;
+        width: 25px;
     }
 
 }
