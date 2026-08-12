@@ -1,4 +1,4 @@
-/*=====================================
+5/*=====================================
         MANDATARIA AUTOMOTOR
           MIRIAM PEREYRA
 ======================================*/
@@ -1937,12 +1937,14 @@ header.oculto{
 html {
     width: 100%;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 img {
@@ -1953,4 +1955,25 @@ img {
 section {
     width: 100%;
     max-width: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 768px) {
+
+    .contenedor-contacto {
+        outline: 3px solid red !important;
+    }
+
+    .formulario-contacto {
+        outline: 3px solid blue !important;
+    }
+
+    .info-contacto {
+        outline: 3px solid green !important;
+    }
+
 }
